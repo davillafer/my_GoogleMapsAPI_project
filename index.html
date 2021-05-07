@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+    <script src="https://kit.fontawesome.com/f246557fd6.js" crossorigin="anonymous"></script>
+    <script src="public/js/map.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=<INSERT_YOUR_KEY>"></script>
+</head>
+<body>
+    <nav class="sidebar">
+        <ul>
+            <li class="menu-option" id="start-game">
+                <a href=".">
+                    <i class="menu-i fas fa-gamepad"></i>
+                    <p class="tooltip">New game</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div id="result-bar" class="result-container">
+        <div class="box">
+            <h4>Latitude</h4>
+            <div id="lat-box" class="score-box"></div>
+        </div>
+        <div class="box">
+            <h4>Longitude</h4>
+            <div id="lng-box" class="score-box"></div>
+        </div>
+        <div class="box">
+            <h4>Aceptar resultado</h4>
+            <div id="aceptar" class="score-box">Aceptar</div>
+        </div>
+    </div>
+    <div id="points-bar" class="result-container">
+        <div class="box">
+            <h4>Your points are:</h4>
+            <div id="points-box" class="score-box"></div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="map">
+            <div id="map_frame"></div>
+        </div>
+        <div id="game_overlay" class="game-overlay">
+            <div id="image" class="image-container move">
+                <div class="resize-dot tl tlbr">
+                </div>
+                <div class="resize-dot tr trbl">
+                </div>
+                <div class="resize-dot bl trbl">
+                </div>
+                <div class="resize-dot br tlbr">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="public/js/main.js"></script>
+    <script src="public/js/reloadOverlay.js"></script>
+    <script src="public/js/game.js"></script>
+</body>
+</html>
